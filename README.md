@@ -24,6 +24,7 @@ Once you've installed Ember CLI via npm, you will have access to a new ember com
 
 1
 ember new ember-quickstart
+
 This one command will create a new directory called ember-quickstart and set up a new Ember application inside of it. Out of the box, your application will include:
 
 A development server.
