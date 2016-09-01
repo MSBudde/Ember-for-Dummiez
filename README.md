@@ -61,7 +61,7 @@ Let's build an application that shows a list of scientists. To do that, the firs
 Ember comes with generators that automate the boilerplate code for common tasks. To generate a route, type this in your terminal:
 
 
-1 ember generate route scientists
+ ember generate route scientists
 
 
 You'll see output like this:
