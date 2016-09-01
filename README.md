@@ -4,11 +4,11 @@
 
 ## We'll cover these steps:
 
-1) Installing Ember.
-2) Creating a new application.
-3) Defining a route.
-4) Writing a UI component.
-5) Building your app to be deployed to production.
+ Installing Ember.
+ Creating a new application.
+ Defining a route.
+ Writing a UI component.
+ Building your app to be deployed to production.
 ---
 
 ## Install Ember
