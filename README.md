@@ -16,14 +16,14 @@
 You can install Ember with a single command using npm, the Node.js package manager. Type this into your terminal:
 
 
-1) npm install -g ember-cli@2.5
+ npm install -g ember-cli@2.5
 ---
 ## Create a New Application
 
 Once you've installed Ember CLI via npm, you will have access to a new ember command in your terminal. You can use the ember new command to create a new application.
 
 
- 1) ## ember new ember-quickstart
+ ## ember new ember-quickstart
 
 This one command will create a new directory called ember-quickstart and set up a new Ember application inside of it. Out of the box, your application will include:
 
@@ -53,7 +53,7 @@ Open http://localhost:4200 in your browser of choice. You should see a page that
 Switch to your editor and open app/templates/application.hbs. This is called the application template and it is always on screen while the user has your application loaded.
 
 In your editor, change the text inside the <h2> from Welcome to Ember to PeopleTracker and save the file. Notice that Ember detects the change you just made and automatically reloads the page for you in the background. You should see that "Welcome to Ember" has been replaced by "PeopleTracker".
----
+
 ## Define a Route
 
 Let's build an application that shows a list of scientists. To do that, the first step is to create a route. For now, you can think of routes as being the different pages that make up your application.
@@ -67,12 +67,12 @@ Ember comes with generators that automate the boilerplate code for common tasks.
 You'll see output like this:
 
 
-1 installing route
-2 create app/routes/scientists.js 3 create app/templates/scientists.hbs
-4 updating router
-5 add route scientists
-6 installing route-test
-7 create tests/unit/routes/scientists-test.js
+ installing route
+ create app/routes/scientists.js 3 create app/templates/scientists.hbs
+ updating router
+ add route scientists
+ installing route-test
+ create tests/unit/routes/scientists-test.js
 
 That's Ember telling you that it has created:
 
@@ -84,7 +84,7 @@ Open the newly-created template in app/templates/scientists.hbs and add the foll
 Open the newly-created template in app/templates/scientists.hbs and add the following HTML:
 
 app/templates/scientists.hbs
-1
+
 <h2>List of Scientists</h2>
 In your browser, open http://localhost:4200/scientists. You should see the <h2> you put in the scientists.hbs template, right below the <h2> from our application.hbs template.
 
@@ -110,14 +110,13 @@ Now let's tell Ember how to turn that array of strings into HTML. Open the scien
 app/templates/scientists.hbs
 
 
+ <h2>List of Scientists</h2>
 
-1) <h2>List of Scientists</h2>
-
-2) <ul>
-  3) {{#each model as |scientist|}}
-    4) <li>{{scientist}}</li>
-  5) {{/each}}
-6) </ul>
+ <ul>
+   {{#each model as |scientist|}}
+     <li>{{scientist}}</li>
+   {{/each}}
+ </ul>
 Here, we use the each helper to loop over each item in the array we provided from the model() hook and print it inside an <li> element.
 
 Create a UI Component
@@ -129,18 +128,18 @@ Let's create a people-list component that we can use in multiple places to show 
 As usual, there's a generator that makes this easy for us. Make a new component by typing:
 
 
-1) ember generate component people-list
+ ember generate component people-list
 Copy and paste the scientists template into the people-list component's template and edit it to look as follows:
 
 app/templates/components/people-list.hbs
 
-1) <h2>{{title}}</h2>
+ <h2>{{title}}</h2>
 
-2) <ul>
- 3) {{#each people as |person|}}
-  4)  <li>{{person}}</li>
- 5) {{/each}}
-6) </ul>
+ <ul>
+  {{#each people as |person|}}
+    <li>{{person}}</li>
+  {{/each}}
+ </ul>
 Note that we've changed the title from a hard-coded string ("List of Scientists") to a dynamic property ({{title}}). We've also renamed scientist to the more-generic person, decreasing the coupling of our component to where it's used.
 
 Save this template and switch back to the scientists template. Replace all our old code with our new componentized version. Components look like HTML tags but instead of using angle brackets (<tag>) they use double curly braces ({{component}}). We're going to tell our component:
@@ -151,14 +150,14 @@ app/templates/scientists.hbs
 
 
 
-1) <h2>List of Scientists</h2>
+ <h2>List of Scientists</h2>
 
-2) <ul>
- 3)  {{#each model as |scientist|}}
-4)    <li>{{scientist}}</li>
- 5) {{/each}}
-6) </ul>
-7) {{people-list title="List of Scientists" people=model}}
+ <ul>
+  {{#each model as |scientist|}}
+    <li>{{scientist}}</li>
+  {{/each}}
+ </ul>
+{{people-list title="List of Scientists" people=model}}
 ---
 Go back to your browser and you should see that the UI looks identical. The only difference is that now we've componentized our list into a version that's more reusable and more maintainable.
 
@@ -169,7 +168,7 @@ Building For Production
 Now that we've written our application and verified that it works in development, it's time to get it ready to deploy to our users. To do so, run the following command:
 
 
-1) ember build --env production
+ ember build --env production
 
 The build command packages up all of the assets that make up your application—JavaScript, templates, CSS, web fonts, images, and more.
 
@@ -198,8 +197,9 @@ Ember CLI is built with JavaScript, and expects the Node.js runtime. It also req
 Ember requires Node.js 0.12 or higher and npm 2.7 or higher. If you're not sure whether you have Node.js or the right version, run this on your command line:
 
 
-1) node --version
-2)npm --version
+ node --version
+npm --version
+
 If you get a "command not found" error or an outdated version for Node:
 
 Windows or Mac users can download and run this Node.js installer.
@@ -224,11 +224,11 @@ Installation
 Install Ember using npm:
 
 
-1) npm install -g ember-cli@2.5
+ npm install -g ember-cli@2.5
 To verify that your installation was successful, run:
 
 
-1) ember -v
+ ember -v
 If a version number is shown, you're ready to go.
 
 
